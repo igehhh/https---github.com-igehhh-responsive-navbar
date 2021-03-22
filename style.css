@@ -6,40 +6,51 @@
 
 .container {
   display: grid;
-  height: 100vh;
+  height: 200vh;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 0.2fr 1.5fr 1.2fr 0.8fr;
-  grid-template-areas: "nav nav nav" "main main main" "content1 content2 content3" "footer footer footer";
+  grid-template-rows: 0.2fr 1.5fr 1.2fr 1.2fr 0.8fr;
+  grid-template-areas: "nav nav nav" "main main main" "content1 content2 content3" "about about about" "footer footer footer";
   grid-gap: 0.2rem;
 }
 nav {
   background: cyan;
   grid-area: nav;
+  height: 10vh;
 }
 main {
   background: rgba(0, 255, 255, 0.605);
   grid-area: main;
+  height: 90vh;
 }
 .content1 {
   background: rgba(0, 255, 255, 0.311);
   grid-area: content1;
+  height: 70vh;
 }
 .content2 {
   background: rgba(0, 255, 255, 0.263);
   grid-area: content2;
+  height: 70vh;
 }
 .content3 {
   background: rgba(0, 255, 255, 0.139);
   grid-area: content3;
+  height: 70vh;
+}
+.about {
+  background-color: bisque;
+  grid-area: about;
+  height: 70vh;
 }
 footer {
   background: darkcyan;
   grid-area: footer;
+  height: 10vh;
 }
 @media only screen and (max-width: 550px) {
   .container {
     grid-template-columns: 1fr;
-    grid-template-rows: 0.2fr 1.5fr 1fr 1fr 1fr 0.8fr;
-    grid-template-areas: "nav" "main" "content1" "content2" "content3" "footer";
+    grid-template-rows: 0.2fr 1.5fr 1fr 1fr 1fr 1fr 0.8fr;
+    grid-template-areas: "nav" "main" "content1" "content2" "content3" "about" "footer";
   }
 }
